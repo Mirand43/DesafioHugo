@@ -11,7 +11,7 @@ public class CrudTarefasApplication {
 	}
 
 	@Bean
-	CommandLineRunner initDatabase(CourseRepository courseRepository) {
+	CommandLineRunner initDatabase(TarefasRepository tarefasRepository) {
 		return args -> {
 			tarefasRepository.deleteAll();
 
@@ -19,7 +19,7 @@ public class CrudTarefasApplication {
 			t.setTarefas("Projecto");
 			t.setDescrition("Entregar ao Hugo");
 
-			tarefasRepository.save(c);
+			tarefasRepository.save(t);
 		};
 	}
 
