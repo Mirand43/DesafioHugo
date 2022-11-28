@@ -10,4 +10,17 @@ public class CrudTarefasApplication {
 		SpringApplication.run(CrudTarefasApplication.class, args);
 	}
 
+	@Bean
+	CommandLineRunner initDatabase(CourseRepository courseRepository) {
+		return args -> {
+			tarefasRepository.deleteAll();
+
+			Tarefas t = new Tarefas();
+			t.setTarefas("Projecto");
+			t.setDescrition("Entregar ao Hugo");
+
+			tarefasRepository.save(c);
+		};
+	}
+
 }
