@@ -2,8 +2,8 @@ package com.antonio.controller;
 
 import java.util.List;
 
-import com.antonio.model.Course;
-import com.antonio.repository.CourseRepository;
+import com.antonio.model.Tarefas;
+import com.antonio.repository.TarefasRepository;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
