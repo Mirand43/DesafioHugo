@@ -19,23 +19,23 @@
             </ng-container>
 
             <!-- Actions Column -->
-            <!-- <ng-container matColumnDef="actions">
-                <mat-header-cell *matHeaderCellDef class="action-column">
-                    <button mat-mini-fab color="accent" aria-label="Adicionar um curso">
-                        <mat-icon (click)="onAdd()">add</mat-icon>
+            <ng-container matColumnDef="actions">
+                <mat-header-cell class="action-column">
+                    <button mat-mini-fab color="accent" aria-label="Adicionar uma tarefa">
+                        <mat-icon>add</mat-icon>
                     </button>
                 </mat-header-cell>
 
-                <mat-cell *matCellDef="let tarefas" class="action-column">
-                    <button mat-icon-button color="primary" aria-label="Editar Curso">
-                        <mat-icon (click)="onEdit(tarefas)">edit</mat-icon>
+                <mat-cell class="action-column">
+                    <button mat-icon-button color="primary" aria-label="Editar tarefa">
+                        <mat-icon>edit</mat-icon>
                     </button>
 
-                    <button mat-icon-button color="warn" aria-label="Remover Curso">
-                        <mat-icon (click)="onDelete(tarefas)">delete</mat-icon>
+                    <button mat-icon-button color="warn" aria-label="Remover tarefa">
+                        <mat-icon>delete</mat-icon>
                     </button>
                 </mat-cell>
-            </ng-container> -->
+            </ng-container>
 
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
             <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>

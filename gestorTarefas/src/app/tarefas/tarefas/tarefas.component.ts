@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { catchError, Observable, of, pipe } from 'rxjs';
 import { ErrorDialogComponent } from 'src/app/shared/components/error-dialog/error-dialog.component';
@@ -13,7 +13,12 @@ import { TarefasService } from '../services/tarefas.service';
 export class TarefasComponent implements OnInit {
 
   tarefas$: Observable<Tarefas[]>;
-  displayedColumns = ['name', 'descrition', 'status'];
+  // @Input() tarefas: Tarefas[] = [];
+  // @Output() add = new EventEmitter(false);
+  // @Output() edit = new EventEmitter(false);
+  // @Output() remove = new EventEmitter(false); 
+  
+  displayedColumns = ['name', 'descrition', 'action'];
 
   constructor(private tarefasService: TarefasService, public dialog: MatDialog) {
     //this.tarefasService = new TarefasService();
@@ -38,5 +43,18 @@ export class TarefasComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  
+  // onAdd() {
+  //   this.add.emit(true);
+  // }
+
+  // onEdit(tarefas: Tarefas) {
+  //   this.edit.emit(tarefas);
+  // }
+
+  // onDelete(tarefas: Tarefas) {
+  //   this.remove.emit(tarefas);
+  // }
 
 }

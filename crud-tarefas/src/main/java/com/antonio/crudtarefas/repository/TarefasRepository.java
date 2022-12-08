@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface TarefasRepository extends JpaRepository<Tarefas, Long>{
-   
+      
 }
